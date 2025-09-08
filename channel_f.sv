@@ -38,11 +38,13 @@ module emu
      output        VGA_F1,
      output [1:0]  VGA_SL,
      output        VGA_SCALER,
-	  output        VGA_DISABLE,
+	 output        VGA_DISABLE,
 	  
      input  [11:0] HDMI_WIDTH,
-	  input  [11:0] HDMI_HEIGHT,
-	  output        HDMI_FREEZE,
+	 input  [11:0] HDMI_HEIGHT,
+	 output        HDMI_FREEZE,
+	 output        HDMI_BLACKOUT,
+	 output        HDMI_BOB_DEINT,
      
      output        LED_USER,  // 1 - ON, 0 - OFF.
      output  [1:0] LED_POWER,
@@ -120,6 +122,8 @@ assign VGA_F1 = 0;
 assign VGA_SCALER = 0;
 assign VGA_DISABLE = 0;
 assign HDMI_FREEZE = 0;
+assign HDMI_BLACKOUT = 0;
+assign HDMI_BOB_DEINT = 0;
 
 assign AUDIO_S = 0;
 assign AUDIO_MIX = 0;
